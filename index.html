@@ -44,14 +44,14 @@
 </head>
 
 <body>
-  <button id="openTabs">Open 100 Tabs</button>
+  <button id="openTabs">Open 30 Tabs</button>
 
   <script>
     document.getElementById('openTabs').addEventListener('click', function () {
       const baseURL = 'https://albatrosicks.github.io/svg-favicon';
 
-      // Open 100 tabs with random hashes
-      for (let i = 0; i < 100; i++) {
+      // Open 30 tabs with random hashes
+      for (let i = 0; i < 30; i++) {
         const randomHash = Math.random().toString(36).substring(2, 15);
         window.open(`${baseURL}/#${randomHash}`, '_blank');
       }
