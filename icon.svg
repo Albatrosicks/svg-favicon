@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16000 16000" width="16000" height="16000">
+  <!-- Sky gradient background -->
+  <defs>
+    <radialGradient id="skyGrad" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D4037;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6D4C41;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4E342E;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="leafGrad1" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#7CB342;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#558B2F;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="leafGrad2" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#9CCC65;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#689F38;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="16000" height="16000" fill="url(#skyGrad)"/>
+
+  <!-- Ground -->
+  <ellipse cx="8000" cy="14500" rx="6000" ry="800" fill="#8D6E63" opacity="0.3"/>
+
+  <!-- Tree trunk -->
+  <path d="M 7200 14000 Q 7400 12000 7500 10000 Q 7600 8000 7700 6000 L 8300 6000 Q 8400 8000 8500 10000 Q 8600 12000 8800 14000 Z" fill="url(#trunkGrad)" stroke="#3E2723" stroke-width="40"/>
+
+  <!-- Trunk texture -->
+  <path d="M 7600 13000 Q 7650 12800 7700 13000" fill="none" stroke="#4E342E" stroke-width="30" opacity="0.6"/>
+  <path d="M 8200 12000 Q 8250 11800 8300 12000" fill="none" stroke="#4E342E" stroke-width="30" opacity="0.6"/>
+  <path d="M 7700 10500 Q 7750 10300 7800 10500" fill="none" stroke="#4E342E" stroke-width="30" opacity="0.6"/>
+  <path d="M 8100 9000 Q 8150 8800 8200 9000" fill="none" stroke="#4E342E" stroke-width="30" opacity="0.6"/>
+
+  <!-- Main branches -->
+  <path d="M 7700 9000 Q 6000 8500 4500 7500" fill="none" stroke="url(#trunkGrad)" stroke-width="200" stroke-linecap="round"/>
+  <path d="M 8300 9000 Q 10000 8500 11500 7500" fill="none" stroke="url(#trunkGrad)" stroke-width="200" stroke-linecap="round"/>
+  <path d="M 7800 7500 Q 5500 7000 3500 6000" fill="none" stroke="url(#trunkGrad)" stroke-width="180" stroke-linecap="round"/>
+  <path d="M 8200 7500 Q 10500 7000 12500 6000" fill="none" stroke="url(#trunkGrad)" stroke-width="180" stroke-linecap="round"/>
+  <path d="M 7900 6500 Q 6500 5500 5000 4500" fill="none" stroke="url(#trunkGrad)" stroke-width="160" stroke-linecap="round"/>
+  <path d="M 8100 6500 Q 9500 5500 11000 4500" fill="none" stroke="url(#trunkGrad)" stroke-width="160" stroke-linecap="round"/>
+
+  <!-- Foliage clusters - bottom layer -->
+  <circle cx="4500" cy="7500" r="1400" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="11500" cy="7500" r="1400" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="3500" cy="6000" r="1300" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="12500" cy="6000" r="1300" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="5000" cy="4500" r="1200" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="11000" cy="4500" r="1200" fill="url(#leafGrad1)" opacity="0.9"/>
+
+  <!-- Middle layer -->
+  <circle cx="6000" cy="6500" r="1500" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="10000" cy="6500" r="1500" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="5500" cy="5000" r="1400" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="10500" cy="5000" r="1400" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="6500" cy="4000" r="1300" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="9500" cy="4000" r="1300" fill="url(#leafGrad2)" opacity="0.9"/>
+
+  <!-- Top layer -->
+  <circle cx="7000" cy="5000" r="1600" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="9000" cy="5000" r="1600" fill="url(#leafGrad1)" opacity="0.9"/>
+  <circle cx="7500" cy="3500" r="1500" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="8500" cy="3500" r="1500" fill="url(#leafGrad2)" opacity="0.9"/>
+  <circle cx="8000" cy="2500" r="1700" fill="url(#leafGrad1)" opacity="0.95"/>
+
+  <!-- Crown top -->
+  <circle cx="8000" cy="1500" r="1400" fill="url(#leafGrad2)" opacity="0.95"/>
+
+  <!-- Highlight details on foliage -->
+  <circle cx="8000" cy="1500" r="400" fill="#C5E1A5" opacity="0.4"/>
+  <circle cx="8000" cy="2500" r="500" fill="#C5E1A5" opacity="0.3"/>
+  <circle cx="7000" cy="5000" r="450" fill="#C5E1A5" opacity="0.3"/>
+  <circle cx="9000" cy="5000" r="450" fill="#C5E1A5" opacity="0.3"/>
+</svg>
+
