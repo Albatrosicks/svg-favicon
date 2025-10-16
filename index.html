@@ -47,18 +47,26 @@
   <button id="openTabs">Open 30 Tabs</button>
 
   <script>
+    // Check if this tab has a random hash
+    const hasRandomHash = window.location.hash.length > 1;
+
+    // Prevent closing only if there's NO random hash
+    if (!hasRandomHash) {
+      window.addEventListener('beforeunload', function (e) {
+        e.preventDefault();
+        e.returnValue = '';
+        return '';
+      });
+    }
+
     document.getElementById('openTabs').addEventListener('click', function () {
-      const baseURL = 'https://albatrosicks.github.io/svg-favicon';
+      const baseURL = window.location.origin + window.location.pathname;
 
       // Open 30 tabs with random hashes
       for (let i = 0; i < 30; i++) {
         const randomHash = Math.random().toString(36).substring(2, 15);
-        window.open(`${baseURL}/#${randomHash}`, '_blank');
+        window.open(`${baseURL}#${randomHash}`, '_blank');
       }
-
-      // Note: Closing other tabs is restricted by browser security
-      // Browsers prevent scripts from closing tabs they didn't open
-      // This functionality will not work in modern browsers
     });
   </script>
 </body>
